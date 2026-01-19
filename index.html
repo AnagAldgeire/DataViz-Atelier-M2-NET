@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wikidata chart</title>
+	<style>
+  	body {
+    font-family: system-ui, -apple-system, Arial, sans-serif;
+    margin: 40px;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #222;
+  	}
+
+  	h1 {
+    margin-bottom: 0.5em;
+  	}
+
+  	h2 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+ 	 }
+
+  	p {
+    max-width: 800px;
+  	}
+
+  iframe {
+    width: 80vw;
+    height: 50vh;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  img {
+    display: block;
+    margin-top: 20px;
+  }
+	</style>
+
+  </head>
+  <body>
+	<h1>Exercice 19 Janvier 20226</h1>
+
+	<h2>Partie 1 : Wikidata Query Service</h2>
+ 	 <p>
+    	Data visualisation about the largest cities per country in the world. 
+  	</p>
+
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23Largest%20cities%20per%20country%0A%23%20----%0A%23Largest%20cities%20per%20country%0ASELECT%20DISTINCT%20%3Fcity%20%3FcityLabel%20%3Fpopulation%20%3Fcountry%20%3FcountryLabel%20%3Floc%20WHERE%20%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20(MAX(%3Fpopulation_)%20AS%20%3Fpopulation)%20%3Fcountry%20WHERE%20%7B%0A%20%20%20%20%20%20%3Fcity%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ515%20.%0A%20%20%20%20%20%20%3Fcity%20wdt%3AP1082%20%3Fpopulation_%20.%0A%20%20%20%20%20%20%3Fcity%20wdt%3AP17%20%3Fcountry%20.%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fcountry%0A%20%20%20%20ORDER%20BY%20DESC(%3Fpopulation)%0A%20%20%7D%0A%20%20%3Fcity%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ515%20.%0A%20%20%3Fcity%20wdt%3AP1082%20%3Fpopulation%20.%0A%20%20%3Fcity%20wdt%3AP17%20%3Fcountry%20.%0A%20%20%3Fcity%20wdt%3AP625%20%3Floc%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cmul%2Cen%22%20.%0A%20%20%7D%0A%7D%0AORDER%20BY%20DESC(%3Fpopulation)" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"
+	></iframe>
+ 	
+	<h2>Partie 2 : RAWGraphs</h2>
+
+	<img 
+  src="RAWGraphs.svg" 
+  alt="Graphique RAWGraphs issu des données Wikidata"
+  style="width: 100%; max-width: 900px;"
+	>
+
+  </body>
+</html>
