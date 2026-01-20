@@ -10,4 +10,4 @@ https://anagaldgeire.github.io/DataViz-Atelier-M2-NET/s01e01.html
 
 Visualisation Texte : https://anagaldgeire.github.io/DataViz-Atelier-M2-NET/s02e01%20-%20textes.html
 
-Visualisation Image :
+Visualisation Image : https://anagaldgeire.github.io/DataViz-Atelier-M2-NET/s02e02-images.html
