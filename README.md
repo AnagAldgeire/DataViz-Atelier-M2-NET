@@ -8,6 +8,6 @@ https://anagaldgeire.github.io/DataViz-Atelier-M2-NET/s01e01.html
 
 ### Séance 2 : 
 
-Visualisation Texte : https://anagaldgeire.github.io/DataViz-Atelier-M2-NET/s02e01 - textes.html
+Visualisation Texte : https://anagaldgeire.github.io/DataViz-Atelier-M2-NET/s02e01%20-%20textes.html
 
 Visualisation Image :
